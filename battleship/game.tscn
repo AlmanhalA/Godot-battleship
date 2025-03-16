@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://c5mdjub5ht7o8"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_wvymi"]
+[ext_resource type="FontFile" uid="uid://b8p0mxqilpya6" path="res://assets/Font/kenvector_future.ttf" id="2_ookn5"]
+[ext_resource type="Texture2D" uid="uid://40deospd62hu" path="res://assets/PNG/grey_button12.png" id="3_7owto"]
+[ext_resource type="Texture2D" uid="uid://dqxkg7i5ef0lp" path="res://assets/PNG/grey_button00.png" id="3_kav55"]
+[ext_resource type="Texture2D" uid="uid://dm8jqwtaikyt3" path="res://assets/battleshipLOGO-removebg-preview.png" id="5_27ldg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_44pv7"]
+texture = ExtResource("3_7owto")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ol80q"]
+texture = ExtResource("3_kav55")
+modulate_color = Color(0.481789, 0.481789, 0.481789, 1)
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_wvymi")
+
+[node name="MENU" type="Button" parent="."]
+offset_left = 22.0
+offset_top = 14.0
+offset_right = 101.0
+offset_bottom = 51.0
+theme_override_fonts/font = ExtResource("2_ookn5")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxTexture_44pv7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ol80q")
+text = " MENU
+"
+
+[node name="enemy Icon" type="TextureRect" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 1658.0
+offset_top = 386.0
+offset_right = 2158.0
+offset_bottom = 886.0
+grow_horizontal = 0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_27ldg")
+
+[node name="player Icon" type="TextureRect" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 8.0
+offset_top = 386.0
+offset_right = 508.0
+offset_bottom = 886.0
+grow_horizontal = 0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_27ldg")
+flip_h = true
+
+[node name="Player" type="Label" parent="."]
+offset_left = 14.0
+offset_top = 600.0
+offset_right = 264.0
+offset_bottom = 669.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ookn5")
+theme_override_font_sizes/font_size = 50
+text = "PLAYER"
+
+[node name="Bot" type="Label" parent="."]
+offset_left = 1572.0
+offset_top = 609.0
+offset_right = 1917.0
+offset_bottom = 678.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ookn5")
+theme_override_font_sizes/font_size = 50
+text = "COMPUTER"
+
+[connection signal="pressed" from="MENU" to="." method="_on_menu_pressed"]

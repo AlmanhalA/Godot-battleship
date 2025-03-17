@@ -17,10 +17,14 @@ modulate_color = Color(0.481789, 0.481789, 0.481789, 1)
 script = ExtResource("1_wvymi")
 
 [node name="MENU" type="Button" parent="."]
-offset_left = 22.0
-offset_top = 14.0
-offset_right = 101.0
-offset_bottom = 51.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 627.0
+offset_top = 100.0
+offset_right = 818.0
+offset_bottom = 157.0
+grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_ookn5")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/hover = SubResource("StyleBoxTexture_44pv7")
@@ -28,14 +32,30 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_ol80q")
 text = " MENU
 "
 
+[node name="RESET" type="Button" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 1000.0
+offset_top = 100.0
+offset_right = 1304.0
+offset_bottom = 157.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_ookn5")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxTexture_44pv7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ol80q")
+text = " restart
+"
+
 [node name="enemy Icon" type="TextureRect" parent="."]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = 1658.0
-offset_top = 386.0
+offset_top = 86.0
 offset_right = 2158.0
-offset_bottom = 886.0
+offset_bottom = 586.0
 grow_horizontal = 0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_27ldg")
@@ -45,9 +65,9 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = 8.0
-offset_top = 386.0
+offset_top = 86.0
 offset_right = 508.0
-offset_bottom = 886.0
+offset_bottom = 586.0
 grow_horizontal = 0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_27ldg")
@@ -55,9 +75,9 @@ flip_h = true
 
 [node name="Player" type="Label" parent="."]
 offset_left = 14.0
-offset_top = 600.0
+offset_top = 309.0
 offset_right = 264.0
-offset_bottom = 669.0
+offset_bottom = 378.0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ookn5")
@@ -66,9 +86,9 @@ text = "PLAYER"
 
 [node name="Bot" type="Label" parent="."]
 offset_left = 1572.0
-offset_top = 609.0
+offset_top = 309.0
 offset_right = 1917.0
-offset_bottom = 678.0
+offset_bottom = 378.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ookn5")
@@ -76,3 +96,4 @@ theme_override_font_sizes/font_size = 50
 text = "COMPUTER"
 
 [connection signal="pressed" from="MENU" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="RESET" to="." method="_on_reset_pressed"]

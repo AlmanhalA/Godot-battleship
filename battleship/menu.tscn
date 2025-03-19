@@ -90,7 +90,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_tavkh")
 text = " close 
 "
 
-[node name="Label2" type="Label" parent="."]
+[node name="title bg" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -107,7 +107,7 @@ theme_override_fonts/font = ExtResource("2_b666d")
 theme_override_font_sizes/font_size = 125
 text = "BATTLESHIP"
 
-[node name="Label" type="Label" parent="."]
+[node name="title" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

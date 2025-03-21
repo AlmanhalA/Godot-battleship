@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cc3vabhnw4q0"]
 
 [ext_resource type="Texture2D" uid="uid://dm8jqwtaikyt3" path="res://assets/battleshipLOGO-removebg-preview.png" id="1_uxk0l"]
-[ext_resource type="Script" path="res://menu.gd" id="1_xw8dv"]
+[ext_resource type="Script" uid="uid://hyoe80w78duu" path="res://menu.gd" id="1_xw8dv"]
 [ext_resource type="FontFile" uid="uid://b8p0mxqilpya6" path="res://assets/Font/kenvector_future.ttf" id="2_b666d"]
 [ext_resource type="Texture2D" uid="uid://bcp7iyt6844av" path="res://assets/WATER.png" id="2_hvinx"]
 [ext_resource type="Texture2D" uid="uid://drl6h0homoavu" path="res://assets/PNG/grey_button06.png" id="3_d0hom"]
